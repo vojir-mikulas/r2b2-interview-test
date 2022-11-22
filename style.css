@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+:root {
+    --main-bg-color:  #f6f4f3;
+    --border-color: #007aff;
+    --secondary-bg-color: #cf3339;
+    --text-color:#1a1919;
+}
+::selection {
+    background: var(--secondary-bg-color);
+    color:white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 480px;
+    height: 300px;
+    padding: 20px;
+
+    background: var(--main-bg-color);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--border-color);
+    border-radius: 4px;
+
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+
+}
+.banner__container{
+ display:grid;
+    grid-template-columns: 55% auto;
+}
+.banner__heading {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+    max-height: 2.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.banner__heading:hover {
+   color: var(--secondary-bg-color)
+}
+.banner__content {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.6rem;
+    margin: 0.5rem 0;
+
+    max-height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.banner__button{
+    width: 5rem;
+    height:2rem;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    color:white;
+    cursor:pointer;
+
+    background-color: var(--secondary-bg-color);
+    border:none;
+    transition: background-color 0.2s;
+
+    align-self: end;
+    justify-self: end;
+}
+.banner__button:hover{
+    background-color: #ff5555;
+}
+.banner__img {
+    height: 60%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.banner__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
