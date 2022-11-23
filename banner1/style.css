@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    --main-bg-color: #f6f4f3;
+    --border-color: #007aff;
+    --secondary-bg-color: #cf3339;
+    --text-color: #1a1919;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.banner {
+    width: 480px;
+    height: 300px;
+
+    color: var(--text-color);
+    position: relative;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.banner__img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    position: absolute;
+    background-color: white;
+}
+
+.banner__img::after {
+    content: '';
+    background-color: var(--secondary-bg-color);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.banner__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner__content {
+    width: 100%;
+    height: 85%;
+    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    left: 0;
+    z-index: 10;
+    color: white;
+}
+
+.banner__content > p {
+    margin: 15px  0;
+    font-size: 1rem;
+}
+
+.banner__content > h3 a {
+    font-size: 1.5rem;
+    transition: text-decoration 0.2s;
+    color: white;
+    text-decoration: none;
+}
+
+.banner__content > h3 a:hover {
+ text-decoration: underline;
+}
+
+.banner__button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.2s;
+    display:flex;
+    align-items: center;
+}
+
+.banner__button:hover {
+  transform: scale(110%);
+}
+.banner__button > .icon{
+    height: 1rem;
+    width: 1rem;
+    margin: 0 5px;
+    fill:white;
+}
